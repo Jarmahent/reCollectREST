@@ -1,5 +1,5 @@
-from django.db import models
 from __future__ import unicode_literals
+from django.db import models
 from django.conf import settings
 
 from django.utils.encoding import smart_text as smart_unicode
@@ -12,7 +12,7 @@ class Snippet(models.Model):
     title = models.CharField(max_length=150)
     code = models.CharField(max_length=10000)
     categories = models.CharField(max_length=250)
-    language = models.CharField(max_lenth=50)
+    language = models.CharField(max_length=50)
 
     class Meta:
         verbose_name = _("Snippet")
