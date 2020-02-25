@@ -33,10 +33,14 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'user',
     'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
     'django.contrib.admin',
     'rest_framework',
     'rest_framework.authtoken',
     'snippet',
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -73,7 +77,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'recollect.wsgi.application'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
