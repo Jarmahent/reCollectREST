@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'user',
+    'rest_auth',
     'django.contrib.admin',
     'rest_framework',
     'rest_framework.authtoken',
@@ -83,7 +85,7 @@ DATABASES = {
     }
 }
 
-
+AUTH_USER_MODEL = 'user.CustomUser'
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

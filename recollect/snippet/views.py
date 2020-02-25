@@ -1,9 +1,7 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.permissions import IsAuthenticated
 
 from snippet.models import Snippet
 from snippet.serializers import SnippetSerializer
-from snippet.permissions import UserIsOwnerSnippet
 
 
 class SnippetCreateAPIView(ListCreateAPIView):

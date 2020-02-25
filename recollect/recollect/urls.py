@@ -1,10 +1,11 @@
 from django.urls import include, path
 from django.contrib import admin
+from rest_framework.authtoken import views
 
 
 api_urls = [
     path('recollect/', include('snippet.urls')),
-    path('', include('users.urls')),
+    path('user/', include('user.urls'))
 ]
 
 urlpatterns = [
